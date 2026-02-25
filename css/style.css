@@ -357,14 +357,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--brand-primary);
     margin-bottom: 2rem;
     animation: bounce 2s infinite;
-    /* 以下を追加 */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     text-align: center;
 }
-
 
 .solution-message p {
     font-size: 1.5rem;
@@ -927,7 +925,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   Results Section (実績・導入企業)
+   Results Section (螳溽ｸｾ繝ｻ蟆主�莨∵･ｭ)
    ======================================== */
 .results-section {
     padding: 6rem 0;
@@ -1020,7 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   Testimonials Section (お客様の声)
+   Testimonials Section (縺雁ｮ｢讒倥�螢ｰ)
    ======================================== */
 .testimonials-section {
     padding: 6rem 0;
@@ -1098,7 +1096,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   Pricing Section (料金プラン)
+   Pricing Section (譁咎≡繝励Λ繝ｳ)
    ======================================== */
 .pricing-section {
     padding: 6rem 0;
@@ -1247,7 +1245,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   FAQ Section (よくある質問)
+   FAQ Section (繧医￥縺ゅｋ雉ｪ蝠�)
    ======================================== */
 .faq-section {
     padding: 6rem 0;
@@ -1326,7 +1324,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   Contact Form Section (お問い合わせフォーム)
+   Contact Form Section (縺雁撫縺�粋繧上○繝輔か繝ｼ繝�)
    ======================================== */
 .contact-form-section {
     padding: 6rem 0;
