@@ -357,7 +357,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--brand-primary);
     margin-bottom: 2rem;
     animation: bounce 2s infinite;
+    /* 以下を追加 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }
+
 
 .solution-message p {
     font-size: 1.5rem;
