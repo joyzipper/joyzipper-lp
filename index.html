@@ -548,91 +548,92 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="contact-form-section" id="contact-form">
-        <div class="container">
-            <h2 class="section-title">お問い合わせフォーム</h2>
-            <p class="section-subtitle">以下のフォームからお気軽にお問い合わせください</p>
+<section class="contact-form-section" id="contact-form">
+    <div class="container">
+        <h2 class="section-title">お問い合わせフォーム</h2>
+        <p class="section-subtitle">以下のフォームからお気軽にお問い合わせください</p>
+        
+        <form class="contact-form" 
+              name="contact" 
+              method="POST" 
+              action="/success.html"
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field">
             
-            <form class="contact-form" 
-                  name="contact" 
-                  method="POST" 
-                  action="/success.html"
-                  data-netlify="true" 
-                  netlify-honeypot="bot-field">
-                
-                <!-- Netlify Forms用の隠しフィールド -->
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <!-- スパム対策用の隠しフィールド -->
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="company">会社名 <span class="required">*</span></label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">お名前 <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">メールアドレス <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">電話番号</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                </div>
-                
+            <!-- Netlify Forms用の隠しフィールド -->
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <!-- スパム対策用の隠しフィールド -->
+            <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            
+            <div class="form-row">
                 <div class="form-group">
-                    <label for="service">ご希望のプラン <span class="required">*</span></label>
-                    <select id="service" name="service" required>
-                        <option value="">選択してください</option>
-                        <option value="light">ライトプラン</option>
-                        <option value="standard">スタンダードプラン</option>
-                        <option value="enterprise">エンタープライズ</option>
-                        <option value="consultation">まずは相談したい</option>
-                    </select>
+                    <label for="company">会社名 <span class="required">*</span></label>
+                    <input type="text" id="company" name="company" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="budget">ご予算（月額）</label>
-                    <select id="budget" name="budget">
-                        <option value="">選択してください</option>
-                        <option value="under30">30万円未満</option>
-                        <option value="30-50">30万円〜50万円</option>
-                        <option value="50-100">50万円〜100万円</option>
-                        <option value="over100">100万円以上</option>
-                    </select>
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                
+            </div>
+            
+            <div class="form-row">
                 <div class="form-group">
-                    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="6" required placeholder="具体的なご相談内容や質問をご記入ください"></textarea>
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                
-                <div class="form-privacy">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="privacy" required>
-                        <span><a href="#" target="_blank">プライバシーポリシー</a>に同意する</span>
-                    </label>
+                <div class="form-group">
+                    <label for="phone">電話番号</label>
+                    <input type="tel" id="phone" name="phone">
                 </div>
-                
-                <button type="submit" class="form-submit">
-                    <i class="fas fa-paper-plane"></i>
-                    送信する
-                </button>
-                
-                <div class="form-message" id="formMessage"></div>
-            </form>
-        </div>
-    </section>
+            </div>
+            
+            <div class="form-group">
+                <label for="service">ご希望のプラン <span class="required">*</span></label>
+                <select id="service" name="service" required>
+                    <option value="">選択してください</option>
+                    <option value="light">ライトプラン</option>
+                    <option value="standard">スタンダードプラン</option>
+                    <option value="enterprise">エンタープライズ</option>
+                    <option value="consultation">まずは相談したい</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="budget">ご予算（月額）</label>
+                <select id="budget" name="budget">
+                    <option value="">選択してください</option>
+                    <option value="under30">30万円未満</option>
+                    <option value="30-50">30万円〜50万円</option>
+                    <option value="50-100">50万円〜100万円</option>
+                    <option value="over100">100万円以上</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6" required placeholder="具体的なご相談内容や質問をご記入ください"></textarea>
+            </div>
+            
+            <div class="form-privacy">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="privacy" required>
+                    <span><a href="#" target="_blank">プライバシーポリシー</a>に同意する</span>
+                </label>
+            </div>
+            
+            <button type="submit" class="form-submit">
+                <i class="fas fa-paper-plane"></i>
+                送信する
+            </button>
+            
+            <div class="form-message" id="formMessage"></div>
+        </form>
+    </div>
+</section>
+
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
