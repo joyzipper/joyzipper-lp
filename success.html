@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お問い合わせありがとうございます - JOY ZIPPER">
+    <title>送信完了 | JOY ZIPPER</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .success-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, 
+                rgba(222, 128, 217, 0.1) 0%, 
+                rgba(10, 10, 10, 0.95) 50%,
+                rgba(200, 85, 195, 0.1) 100%);
+            padding: 2rem;
+        }
+        
+        .success-content {
+            text-align: center;
+            max-width: 600px;
+            background: rgba(26, 26, 26, 0.9);
+            border: 2px solid rgba(222, 128, 217, 0.3);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #DE80D9, #C855C3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #fff;
+            animation: scaleIn 0.5s ease-out 0.3s both;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .success-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #DE80D9, #C855C3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+        
+        .success-message {
+            font-size: 1.25rem;
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .success-submessage {
+            font-size: 1rem;
+            color: #999999;
+            margin-bottom: 3rem;
+        }
+        
+        .success-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .success-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #DE80D9, #C855C3);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(222, 128, 217, 0.2);
+        }
+        
+        .success-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(222, 128, 217, 0.3);
+        }
+        
+        .success-button.secondary {
+            background: transparent;
+            border: 2px solid #DE80D9;
+            color: #DE80D9;
+        }
+        
+        .success-button.secondary:hover {
+            background: rgba(222, 128, 217, 0.1);
+        }
+        
+        .success-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(222, 128, 217, 0.2);
+        }
+        
+        .success-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #999999;
+        }
+        
+        .success-info-item i {
+            color: #DE80D9;
+            font-size: 1.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .success-content {
+                padding: 3rem 2rem;
+            }
+            
+            .success-buttons {
+                flex-direction: column;
+            }
+            
+            .success-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-page">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1 class="success-title">送信完了</h1>
+            
+            <p class="success-message">
+                お問い合わせありがとうございます。<br>
+                担当者より<strong>3営業日以内</strong>にご連絡いたします。
+            </p>
+            
+            <p class="success-submessage">
+                ご入力いただいたメールアドレス宛に、<br>
+                確認メールを自動送信しております。
+            </p>
+            
+            <div class="success-buttons">
+                <a href="/" class="success-button">
+                    <i class="fas fa-home"></i>
+                    トップページに戻る
+                </a>
+                <a href="/#service" class="success-button secondary">
+                    <i class="fas fa-info-circle"></i>
+                    サービス詳細を見る
+                </a>
+            </div>
+            
+            <div class="success-info">
+                <div class="success-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>営業時間：平日 10:00〜18:00</span>
+                </div>
+                <div class="success-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>メールでのお問い合わせも受け付けております</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
