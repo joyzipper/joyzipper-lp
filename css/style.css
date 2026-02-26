@@ -149,12 +149,21 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 0;
 }
 
+.hero-grid .hero-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+}
+
 .hero-title {
     font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
     font-size: clamp(2rem, 6vw, 4rem);
     margin-bottom: 2rem;
     font-weight: 900;
     line-height: 1.3;
+    text-align: center !important;
 }
 
 .title-line {
@@ -193,6 +202,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-secondary);
     margin-bottom: 3rem;
     line-height: 1.8;
+    text-align: center !important;
 }
 
 .hero-subtitle strong {
@@ -311,10 +321,14 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 999;
     box-shadow: 0 4px 20px rgba(222, 128, 217, 0.4);
     animation: pulse-banner 2s infinite;
     transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .influencer-banner:hover {
@@ -1240,6 +1254,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.25rem;
 }
 
+.influencer-recruitment .cta-button {
+    display: inline-flex;
+    margin: 0 auto;
+    flex-direction: column;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.influencer-recruitment > .container {
+    text-align: center;
+}
+
 /* ========================================
    Testimonials Section (縺雁ｮ｢讒倥�螢ｰ)
    ======================================== */
@@ -1721,6 +1747,13 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-image {
