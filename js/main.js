@@ -5,6 +5,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========================================
+    // フォーム切り替え（企業様/インフルエンサー）
+    // ========================================
+    const formTypeSelector = document.getElementById('form-type-selector');
+    const corporateForm = document.getElementById('corporate-form');
+    const influencerForm = document.getElementById('influencer-form');
+    
+    if (formTypeSelector && corporateForm && influencerForm) {
+        formTypeSelector.addEventListener('change', function() {
+            const selectedType = this.value;
+            
+            if (selectedType === 'corporate') {
+                corporateForm.style.display = 'block';
+                influencerForm.style.display = 'none';
+            } else if (selectedType === 'influencer') {
+                corporateForm.style.display = 'none';
+                influencerForm.style.display = 'block';
+            } else {
+                corporateForm.style.display = 'none';
+                influencerForm.style.display = 'none';
+            }
+        });
+    }
+    
+    // ========================================
     // Smooth Scroll for Anchor Links
     // ========================================
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
