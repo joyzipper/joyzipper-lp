@@ -261,6 +261,71 @@ document.addEventListener('DOMContentLoaded', function() {
     // Netlify Formsを使用するため、JavaScript処理は無効化
     // フォームはHTMLのネイティブ送信を使用します
     
+    // ========================================
+    // Form Field Switching Based on Inquiry Type
+    // ========================================
+    const inquiryTypeSelect = document.getElementById('inquiry-type');
+    const corporateFields = document.getElementById('corporate-fields');
+    const influencerFields = document.getElementById('influencer-fields');
+    
+    if (inquiryTypeSelect && corporateFields && influencerFields) {
+        // Initial state: hide both
+        corporateFields.style.display = 'none';
+        influencerFields.style.display = 'none';
+        
+        inquiryTypeSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            
+            if (selectedValue === 'corporate') {
+                // Show corporate fields
+                corporateFields.style.display = 'block';
+                influencerFields.style.display = 'none';
+                
+                // Enable corporate fields, disable influencer fields
+                setCorporateFieldsRequired(true);
+                setInfluencerFieldsRequired(false);
+                
+            } else if (selectedValue === 'influencer') {
+                // Show influencer fields
+                corporateFields.style.display = 'none';
+                influencerFields.style.display = 'block';
+                
+                // Enable influencer fields, disable corporate fields
+                setCorporateFieldsRequired(false);
+                setInfluencerFieldsRequired(true);
+                
+            } else {
+                // Hide both if nothing selected
+                corporateFields.style.display = 'none';
+                influencerFields.style.display = 'none';
+                setCorporateFieldsRequired(false);
+                setInfluencerFieldsRequired(false);
+            }
+        });
+    }
+    
+    function setCorporateFieldsRequired(isRequired) {
+        const fields = corporateFields.querySelectorAll('input, select, textarea');
+        fields.forEach(field => {
+            if (isRequired) {
+                field.setAttribute('required', 'required');
+            } else {
+                field.removeAttribute('required');
+            }
+        });
+    }
+    
+    function setInfluencerFieldsRequired(isRequired) {
+        const fields = influencerFields.querySelectorAll('input, select, textarea');
+        fields.forEach(field => {
+            if (isRequired) {
+                field.setAttribute('required', 'required');
+            } else {
+                field.removeAttribute('required');
+            }
+        });
+    }
+    
     /*
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
