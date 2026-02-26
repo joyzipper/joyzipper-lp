@@ -309,8 +309,10 @@ document.addEventListener('DOMContentLoaded', function() {
         fields.forEach(field => {
             if (isRequired) {
                 field.setAttribute('required', 'required');
+                field.removeAttribute('disabled');
             } else {
                 field.removeAttribute('required');
+                field.setAttribute('disabled', 'disabled');
             }
         });
     }
@@ -320,8 +322,10 @@ document.addEventListener('DOMContentLoaded', function() {
         fields.forEach(field => {
             if (isRequired) {
                 field.setAttribute('required', 'required');
+                field.removeAttribute('disabled');
             } else {
                 field.removeAttribute('required');
+                field.setAttribute('disabled', 'disabled');
             }
         });
     }
