@@ -18,12 +18,90 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedType === 'corporate') {
                 corporateForm.style.display = 'block';
                 influencerForm.style.display = 'none';
+                
+                // GA4イベント送信
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_type_selected', {
+                        'event_category': 'Form',
+                        'event_label': '企業様フォーム選択',
+                        'value': 1
+                    });
+                }
             } else if (selectedType === 'influencer') {
                 corporateForm.style.display = 'none';
                 influencerForm.style.display = 'block';
+                
+                // GA4イベント送信
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_type_selected', {
+                        'event_category': 'Form',
+                        'event_label': 'インフルエンサーフォーム選択',
+                        'value': 1
+                    });
+                }
             } else {
                 corporateForm.style.display = 'none';
                 influencerForm.style.display = 'none';
+            }
+        });
+    }
+    
+    // ========================================
+    // Google Analytics イベントトラッキング
+    // ========================================
+    
+    // 「無料相談する」ボタンのクリック追跡
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const buttonText = this.textContent.trim();
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cta_button_click', {
+                    'event_category': 'CTA',
+                    'event_label': buttonText,
+                    'value': 1
+                });
+            }
+        });
+    });
+    
+    // 「インフルエンサー募集中」バナーのクリック追跡
+    const influencerBanner = document.querySelector('.influencer-banner');
+    if (influencerBanner) {
+        influencerBanner.addEventListener('click', function(e) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'influencer_banner_click', {
+                    'event_category': 'Banner',
+                    'event_label': 'インフルエンサー募集中バナー',
+                    'value': 1
+                });
+            }
+        });
+    }
+    
+    // フォーム送信イベント（企業様）
+    if (corporateForm) {
+        corporateForm.addEventListener('submit', function(e) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Conversion',
+                    'event_label': '企業様フォーム送信',
+                    'value': 1
+                });
+            }
+        });
+    }
+    
+    // フォーム送信イベント（インフルエンサー）
+    if (influencerForm) {
+        influencerForm.addEventListener('submit', function(e) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Conversion',
+                    'event_label': 'インフルエンサーフォーム送信',
+                    'value': 1
+                });
             }
         });
     }
