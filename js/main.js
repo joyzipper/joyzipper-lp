@@ -208,8 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // CTA Button Ripple Effect
     // ========================================
-    const ctaButtons = document.querySelectorAll('.cta-button');
+    // ctaButtons は既に54行目で宣言済みなので、再度取得は不要
     
+    // リップルエフェクトを追加（既存のctaButtonsを使用）
     ctaButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             const ripple = document.createElement('span');
