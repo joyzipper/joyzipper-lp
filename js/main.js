@@ -83,11 +83,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // フォーム送信イベント（企業様）
     if (corporateForm) {
         corporateForm.addEventListener('submit', function(e) {
+            // GA4イベント送信
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'form_submit', {
                     'event_category': 'Conversion',
                     'event_label': '企業様フォーム送信',
                     'value': 1
+                });
+            }
+            
+            // Meta Pixel Leadイベント送信
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: '企業様問い合わせ',
+                    content_category: 'Corporate Inquiry'
                 });
             }
         });
@@ -96,11 +105,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // フォーム送信イベント（インフルエンサー）
     if (influencerForm) {
         influencerForm.addEventListener('submit', function(e) {
+            // GA4イベント送信
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'form_submit', {
                     'event_category': 'Conversion',
                     'event_label': 'インフルエンサーフォーム送信',
                     'value': 1
+                });
+            }
+            
+            // Meta Pixel Leadイベント送信
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'インフルエンサー登録',
+                    content_category: 'Influencer Registration'
                 });
             }
         });
