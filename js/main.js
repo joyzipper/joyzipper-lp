@@ -338,6 +338,80 @@ document.addEventListener('DOMContentLoaded', function() {
     logicNumbers.forEach(num => numberObserver.observe(num));
     
     // ========================================
+    // Simulation Logic
+    // ======================================== 
+    const simulateBtn = document.getElementById('simulate-btn');
+    const budgetInput = document.getElementById('budget-input');
+    const simulationResults = document.getElementById('simulation-results');
+    
+    if (simulateBtn && budgetInput && simulationResults) {
+        simulateBtn.addEventListener('click', function() {
+            const budget = parseInt(budgetInput.value);
+            
+            if (!budget || budget < 10) {
+                alert('予算は10万円以上を入力してください');
+                return;
+            }
+            
+            if (budget > 1000) {
+                alert('予算は1000万円以下を入力してください');
+                return;
+            }
+            
+            // STEP 1: キャスティング総フォロワー数
+            const totalFollowers = budget; // 100万円 = 100万フォロワー
+            
+            // STEP 2: リーチ（10%）
+            const reach = totalFollowers * 0.1;
+            
+            // STEP 3: インプレッション（15%）
+            const impressions = totalFollowers * 0.15;
+            
+            // STEP 4: タップ（2%）
+            const clicks = reach * 0.02;
+            
+            // Format numbers properly
+            function formatNumber(num) {
+                if (num >= 1) {
+                    return Math.floor(num) + '万人';
+                } else {
+                    return Math.floor(num * 10000).toLocaleString() + '人';
+                }
+            }
+            
+            function formatClicks(num) {
+                const total = Math.floor(num * 10000);
+                return total.toLocaleString() + 'タップ';
+            }
+            
+            // Update UI
+            document.getElementById('result-followers').textContent = formatNumber(totalFollowers);
+            document.getElementById('result-reach').textContent = formatNumber(reach);
+            document.getElementById('result-clicks').textContent = formatClicks(clicks);
+            
+            // Show results with animation
+            simulationResults.style.display = 'block';
+            simulationResults.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // GA4 Event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'simulation_executed', {
+                    'event_category': 'Simulation',
+                    'event_label': 'Budget: ' + budget + '万円',
+                    'value': budget
+                });
+            }
+        });
+        
+        // Enter key trigger
+        budgetInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                simulateBtn.click();
+            }
+        });
+    }
+    
+    // ========================================
     // Animate Stats Numbers
     // ========================================
     const statNumbers = document.querySelectorAll('.stat-number');
