@@ -361,14 +361,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // STEP 1: キャスティング総フォロワー数
             const totalFollowers = budget; // 100万円 = 100万フォロワー
             
-            // STEP 2: リーチ（10%）
-            const reach = totalFollowers * 0.1;
+            // STEP 2: リーチ（20%）
+            const reach = totalFollowers * 0.2;
             
-            // STEP 3: インプレッション（15%）
-            const impressions = totalFollowers * 0.15;
+            // STEP 3: インプレッション（30%）
+            const impressions = totalFollowers * 0.3;
             
-            // STEP 4: タップ（2%）
-            const clicks = reach * 0.02;
+            // STEP 4: タップ（4%）
+            const clicks = reach * 0.04;
             
             // Format numbers properly
             function formatNumber(num) {
