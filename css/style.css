@@ -301,6 +301,44 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+/* Hero Trust */
+.hero-trust {
+    margin: 1.5rem 0 2rem 0;
+    text-align: center;
+}
+
+.trust-text {
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* CTA Details */
+.cta-details {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.cta-benefits {
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    color: var(--text-secondary);
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+.cta-guarantee {
+    font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+    color: var(--text-muted);
+    margin: 0.5rem 0;
+}
+
+.cta-urgency {
+    font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+    color: var(--brand-light);
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
 /* ========================================
    First Visual Diagram Section
    ======================================== */
