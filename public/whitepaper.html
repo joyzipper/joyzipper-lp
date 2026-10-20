@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>StoryZIP™︎ White Paperを無料ダウンロード｜JOY ZIPPER</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="site-logo" aria-label="StoryZIP™︎ トップへ戻る">
+      <img src="assets/logos/storyzip-horizontal-black-removebg.png" alt="StoryZIP™︎" class="site-logo-img">
+      <span class="logo-sub">運営 JOY ZIPPER</span>
+    </a>
+    <nav class="site-nav" aria-label="グローバルナビゲーション">
+      <a href="index.html" class="nav-secondary">トップへ戻る</a>
+    </nav>
+  </div>
+</header>
+
+<!--
+  【このページについて】
+  JavaScriptが無効な環境向けの資料請求フォールバックページです（Master Prompt SECTION 6 指示）。
+  index.htmlの副CTA（モーダル）が動作しない場合、このページに遷移する運用を想定しています。
+-->
+
+<main id="main-content">
+  <section class="simple-page">
+    <h1>StoryZIP™︎ White Paperを無料ダウンロード</h1>
+    <p>推薦者の選び方、コミュニティの考え方、ストーリーズと動画の活用方法を、全12ページにまとめました。</p>
+
+    <form
+      name="whitepaper"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field-whitepaper"
+      action="thanks-whitepaper.html"
+      style="text-align:left; max-width:480px; margin:0 auto;"
+    >
+      <input type="hidden" name="form-name" value="whitepaper" />
+      <p class="form-honeypot">
+        <label>入力しないでください（スパム対策）<input name="bot-field-whitepaper"></label>
+      </p>
+
+      <div class="form-field">
+        <label for="wp-company">会社名・団体名<span class="req">必須</span></label>
+        <input type="text" id="wp-company" name="company" required autocomplete="organization">
+      </div>
+
+      <div class="form-field">
+        <label for="wp-name">氏名<span class="req">必須</span></label>
+        <input type="text" id="wp-name" name="name" required autocomplete="name">
+      </div>
+
+      <div class="form-field">
+        <label for="wp-email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="wp-email" name="email" required autocomplete="email">
+      </div>
+
+      <label class="form-consent">
+        <input type="checkbox" name="privacy-consent" required>
+        <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。<span class="req">必須</span></span>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block">資料を受け取る</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-name">JOY ZIPPER／ジョイジッパー合同会社</p>
+    <nav class="footer-links" aria-label="フッターナビゲーション">
+      <a href="mailto:info@joyzipper.jp">お問い合わせ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
