@@ -600,6 +600,68 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
 }
 
 /* ========================================================
+   S6B 代表者プロフィール（2026-10-27追加）
+   ======================================================== */
+.founder-block {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.founder-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+.founder-timeline {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.founder-timeline li {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+.founder-timeline li:last-child { border-bottom: none; padding-bottom: 0; }
+.founder-year {
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  font-size: 0.95rem;
+}
+.founder-event {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+.founder-summary {
+  margin-top: 28px;
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+.founder-credit {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+.founder-companies {
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
+  margin-bottom: 4px;
+}
+.founder-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .founder-timeline li { grid-template-columns: 80px 1fr; }
+}
+
+/* ========================================================
    S7 CTA / フォーム / FAQ
    ======================================================== */
 .cta-section { background: var(--color-bg-soft); }
