@@ -506,7 +506,7 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
 .ig-feed-item {
   position: relative;
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #111;
 }
@@ -517,6 +517,17 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
   transition: transform 0.35s ease;
 }
 .ig-feed-item:hover img, .ig-feed-item:focus-visible img { transform: scale(1.04); }
+.ig-feed-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 768px) {
+  .ig-feed-badge { font-size: 1rem; top: 10px; right: 10px; }
+}
 .ig-feed-overlay {
   position: absolute;
   inset: 0;
